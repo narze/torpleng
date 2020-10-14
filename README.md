@@ -19,3 +19,7 @@
 
 ## Features (TODO)
 - Render with HTML (Vue.js)
+
+## Entries
+
+- ขวัญเจ้าเอยขวัญมาใยหนอล่องลอยหลุดไป อยู่ที่ไหนช่วยบอกได้ไหมใจ ใยถึงไม่คืนกลับมา [ขวัญเอยขวัญมา - PALMY](https://youtu.be/T6F6hOKPCo4?t=71)
