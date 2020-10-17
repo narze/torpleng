@@ -25,7 +25,7 @@
 
 - Render with HTML (Vue.js)
 - Validate with Github Actions
-
+BOYd - ใคร feat Pod 
 ## Entries
 
 - ขวัญเจ้าเอยขวัญมาใยหนอล่องลอยหลุดไป อยู่ที่ไหนช่วยบอกได้ไหมใจ ใยถึงไม่คืนกลับมา [Palmy - ขวัญเอยขวัญมา](https://youtu.be/T6F6hOKPCo4?t=71)
@@ -39,4 +39,4 @@
 - มันเจ็บจะขาดใจอยู่ตรงหน้าเธอ แต่ต้องเก็บไว้ไม่แสดงว่าเสียใจ [Pancake - ขาดใจ](https://youtu.be/l9MRG7XV3V0?t=43)
 - ใจมันยังเกเรเสมอไม่เคยจะเชื่อฟัง [Nice 2 Meet U - ใจเกเร](https://youtu.be/zDQeip3CPzI?t=103)
 - ฟังเสียงใครต่อใครมากกว่าหัวใจตัวเราเองสวยงามคนเราแล้วแต่ใจใคร [SIN feat. โอม Cocktail - ฟัง](https://youtu.be/f05VJ1moOKE?t=162)
-- ใครกันที่ทำให้ฉันรัก ใครกันที่มาอยู่ในความฝัน คนที่ฉันคิดถึงอยู่ทุกวัน ก็ใครคนนั้นฉันเรียกว่าเธอ [รักฉันเรียกว่าเธอ : ALL KAMIKAZE](https://www.youtube.com/watch?v=iRCb_PodGfQ)
+- ใครสักคนที่เกิดมาเพื่อผูกพัน ใครที่เกิดมาคู่กับฉัน [BOYd - ใคร feat Pod](https://www.youtube.com/watch?v=2w-QR1v3QGk)
