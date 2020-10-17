@@ -40,3 +40,4 @@
 - ใจมันยังเกเรเสมอไม่เคยจะเชื่อฟัง [Nice 2 Meet U - ใจเกเร](https://youtu.be/zDQeip3CPzI?t=103)
 - ฟังเสียงใครต่อใครมากกว่าหัวใจตัวเราเองสวยงามคนเราแล้วแต่ใจใคร [SIN feat. โอม Cocktail - ฟัง](https://youtu.be/f05VJ1moOKE?t=162)
 - ใครกันที่ทำให้ฉันรัก ใครกันที่มาอยู่ในความฝัน คนที่ฉันคิดถึงอยู่ทุกวัน ก็ใครคนนั้นฉันเรียกว่าเธอ [รักฉันเรียกว่าเธอ : ALL KAMIKAZE](https://www.youtube.com/watch?v=iRCb_PodGfQ)
+- เธอต้องมีฉัน คนที่รักกัน ไม่ใช่ฉัน แล้วมันจะเป็นใคร [เธอต้องมีฉัน - Tattoo Colour](https://www.youtube.com/watch?v=nqvhGjqXU04)
