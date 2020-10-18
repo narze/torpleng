@@ -50,3 +50,4 @@
 - ใจฉันไม่ได้รู้สึก เหมือนครั้งที่เราได้เจอกันเมื่อก่อนนั้น [Whal & Dolph - ไม่รู้ทำไม](https://youtu.be/CCxlsWFH3Nc?t=39)
 - (เมื่อเรา)นั้นคิดจะปิด ทุกความสัมพันธ์ใดๆ ร่างกายมีเพียงแค่ฉันและเธอ [Musketeers - ใจความสำคัญ](https://youtu.be/rw1BXzZgoPc?t=37)
 - เธอ เธอทั้งนั้นที่ทำ ให้ช่วงชีวิตของฉันน่าจดจำ [เธอทั้งนั้น - Groove Riders](https://youtu.be/f-eE1z1Pv7Y?t=40)
+- จำเก่งจนไม่เคยลืมเธอ [จำเก่ง - F.HERO x Tilly Birds](https://youtu.be/7iSia7rb1PY?t=92)
