@@ -75,4 +75,3 @@
 - เธอคือคนพิเศษ เสกให้ใจของฉัน โบกปีกบินสู่ฟ้า [Calories Blah Blah - คนพิเศษ](https://youtu.be/oE8kMw9QUs8?t=15)
 - (ที่พาเรา) พบกัน แล้วเวลา ก็พาเราจากกัน[Thaitanium - สบายดีหรือเปล่า 2017](https://youtu.be/Tk2ojsflPws?t=73)
 <!-- เพิ่มเพลงด้านบนบรรทัดนี้ format : เนื้อเพลง [ศิลปิน/วง - ชื่อเพลง](Youtube link with timestamp) -->
-
