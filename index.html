@@ -1,0 +1,104 @@
+<style>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#header {
+  flex-basis: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+#song-list {
+  flex-basis: 50%;
+  max-height: 500px;
+  overflow: scroll;
+}
+#song-list li {
+  margin: 1em;
+}
+#song-list a {
+  cursor: pointer;
+}
+
+#player {
+  flex-basis: 50%;
+}
+
+#playframe {
+  width: 560;
+  height: 315;
+  margin: 0 auto;
+  display: block;
+}
+</style>
+
+<div class="container">
+  <div id="header">
+    <h1>🎤 ต่อเพลง 🎸</h1>
+  </div>
+  <div id="player">
+    <iframe id="playframe" v-bind:src="url"
+            width="560" height="315" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+  <div id="song-list">
+    <ol>
+      <li v-for="song in songs">
+        <a v-on:click="player.load_video(song.id, song.time)">
+          {{ song.excerpt }}
+        </a>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+var player = new Vue({
+  el: '#player',
+  data: { url: 'https://www.youtube.com/embed/0qJRAmktUJw' },
+  methods: {
+    load_video: (id, time) => {
+      player.url = `https://www.youtube.com/embed/${id}?start=${time}`;
+    }
+  }
+});
+
+var song_list = new Vue({
+  el: '#song-list',
+  data: { songs: [] },
+  mounted: () => {
+    let lyrics;
+    let pattern = /- (.*) \[(.*)\]\(https\:\/\/youtu\.be\/([a-zA-Z0-9_-]+)\?t=(\d+)\).*/;
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4) {
+        lyrics = xhr.responseText
+                       .split("\n")
+                       .filter((line) => /youtu\.be/.test(line))
+        lyrics.forEach((line) => {
+          let match = line.match(pattern);
+          if (match === null || match.length !== 5) {
+            console.log(`error: can not parse "${line}"`);
+            return;
+          }
+          song_list.songs.push({
+            excerpt: match[1],
+            artist_song: match[2],
+            id: match[3],
+            time: match[4]
+          });
+        });
+      }
+    }
+    xhr.open(
+      "GET",
+      "https://raw.githubusercontent.com/narze/torpleng/main/README.md"
+    );
+    xhr.send();
+  }
+});
+</script>
