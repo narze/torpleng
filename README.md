@@ -26,7 +26,7 @@
 
 ## Features (TODO)
 
-- [x] Render with HTML (Vue.js) - Done by @neizod :pray
+- [x] Render with HTML (Vue.js) - Done by @neizod :pray:
 - Validate with Github Actions
 
 ## Entries
