@@ -90,9 +90,4 @@ html::-webkit-scrollbar {
 		grid-template-columns: 1fr;
 		gap: 1em;
 	}
-	#song-list {
-		font-family: 'Sarabun', sans-serif;
-		max-height: 900px;
-		overflow: scroll;
-	}
 }
