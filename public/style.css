@@ -22,10 +22,16 @@ html::-webkit-scrollbar {
 	font-family: 'Sarabun', sans-serif;
 	max-height: 900px;
 	overflow: scroll;
+	grid-row: span 2 / span 2;
+}
+
+#song-list ol {
+	list-style-position: inside;
 }
 
 #song-list li {
 	margin: 1em;
+	line-height: 1.6;
 	border-bottom: 1px solid rgb(143, 143, 143);
 	border-top: 1px solid rgb(143, 143, 143);
 	padding: 15px;
@@ -80,7 +86,7 @@ html::-webkit-scrollbar {
 #lyrics, #author {
 	color: #b3b3b3;
 	font-size: 2.3em;
-	margin-left: 40px;
+	margin-left: 55px;
 	cursor: pointer;
 }
 
@@ -90,4 +96,8 @@ html::-webkit-scrollbar {
 		grid-template-columns: 1fr;
 		gap: 1em;
 	}
+	#song-list li {
+		padding: 25px;
+	}	
+	
 }
