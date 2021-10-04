@@ -36,7 +36,7 @@ var song_list = new Vue({
 	data: { songs: [] },
 	mounted: () => {
 	  let lyrics;
-	  let pattern = /- (.*) \[(.*)\]\(https\:\/\/youtu\.be\/([a-zA-Z0-9_-]+)\?t=(\d+)\).*/; // God I hate Regex
+	  let pattern = /- (.*) \[(.*)\]\(https\:\/\/youtu\.be\/([a-zA-Z0-9_-]+)\?t=(\d+)\).*/;
 	  let xhr = new XMLHttpRequest();
 	  xhr.onreadystatechange = () => {
 		if (xhr.readyState === 4) {
