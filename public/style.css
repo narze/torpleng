@@ -13,7 +13,9 @@ html::-webkit-scrollbar {
 	display: grid;
 	height: 97.8vh;
 	align-items: stretch;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: minmax(0, 1fr) 1fr;
+	min-height: 0; 
+	min-width: 0;   
 }
 
 #header {
@@ -72,9 +74,7 @@ html::-webkit-scrollbar {
 }
 
 #playframe {
-	width: 560;
-	height: 315;
-	margin: 0 auto;
+	margin: auto auto;
 	display: block;
 	border-radius: 10px;
 	box-shadow: 0 0 10px #535353;
@@ -93,6 +93,13 @@ html::-webkit-scrollbar {
 	font-size: 2.3em;
 	margin-left: 55px;
 	cursor: pointer;
+}
+
+#functions {
+	font-family: 'Sarabun', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @media (max-width: 1124px) {
