@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 
+a {
+	text-decoration: none;
+	color: currentColor;
+}
+
 html::-webkit-scrollbar {
 	width: 0px;
 }
