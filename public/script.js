@@ -43,11 +43,9 @@ var song_list = new Vue({
 		  lyrics = xhr.responseText
 						 .split("\n")
 						 .filter((line) => /(youtu\.be|(?:www\.|.*)youtube.com)/.test(line))
-			console.log(lyrics)
 		  lyrics.forEach((line) => {
 			let match = line.match(pattern);
-			console.log(match)
-			if (!match) {
+			if (!match || match.length !== 5) {
 			  console.log(`error: can not parse "${line}"`);
 			  return;
 			}
