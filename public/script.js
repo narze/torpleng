@@ -36,18 +36,22 @@ var song_list = new Vue({
 	data: { songs: [] },
 	mounted: () => {
 	  let lyrics;
-	  let pattern = /- (.*) \[(.*)\]\(https\:\/\/youtu\.be\/([a-zA-Z0-9_-]+)\?t=(\d+)\).*/;
+	  let patternShort = /- (.*) \[(.*)\]\(https\:\/\/youtu\.be\/([a-zA-Z0-9_-]+)\?t=(\d+)\).*/;
+		let patternFull = /- (.*) \[(.*)\]\(https\:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)\&t=(\d+)s?\).*/;
 	  let xhr = new XMLHttpRequest();
 	  xhr.onreadystatechange = () => {
 		if (xhr.readyState === 4) {
 		  lyrics = xhr.responseText
 						 .split("\n")
-						 .filter((line) => /youtu\.be/.test(line))
+						 .filter((line) => (/youtu\.be/.test(line) || /youtube\.com/.test(line)))
 		  lyrics.forEach((line) => {
-			let match = line.match(pattern);
+			let match = line.match(patternShort);
 			if (match === null || match.length !== 5) {
-			  console.log(`error: can not parse "${line}"`);
-			  return;
+				match = line.match(patternFull);
+				if (match === null || match.length !== 5) {
+					console.log(`error: can not parse "${line}"`);
+					return;
+				}
 			}
 			song_list.songs.push({
 			  excerpt: match[1],
