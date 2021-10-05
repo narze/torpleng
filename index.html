@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="./public/style.css" />
 <link rel="shortcut icon" href="./public/favicon.svg" type="image/svg+xml">
 <div class="container">
@@ -11,22 +12,24 @@
     </iframe>
   </div>
   <div id="song-list">
+		<ol>
+			<li v-for="song in songs" id="song-card" v-on:click="player.load_video(song.id, song.time)">
+			  <a>{{ state.select === 'lyrics' ? song.excerpt : song.artist_song }}</a>
+			</li>
+		</ol>
+  </div>
+  <div id="functions">
 	<a id="lyrics" onclick="setmode('lyrics');">คำร้อง</a>
 	<a id="author" onclick="setmode('author');">ผู้แต่ง</a>
-    <ol>
-      <li v-for="song in songs" id="song-card" v-on:click="player.load_video(song.id, song.time)">
-		<a>{{ state.select === 'lyrics' ? song.excerpt : song.artist_song }}</a>
-      </li>
-    </ol>
   </div>
-  <div id="support">
+</div>
+<div id="support">
 	<a href="https://github.com/narze/torpleng" target="_blank">
 		<img id="kofi" width="30" height="30" src="./public/github.png" /> 
 	</a>
 	<a href="https://ko-fi.com/narze" target="_blank">
 		<img id="kofi" width="140" height="30" src="./public/coffee.png" /> 
 	</a>
-  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>

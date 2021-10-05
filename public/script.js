@@ -1,11 +1,11 @@
+document.getElementById('lyrics').style.color = "#000";
+document.getElementById('author').style.color = "#b3b3b3"
+
 var state = new Vue({
 	data: {
 		select: 'lyrics'
 	}
 })
-
-document.getElementById('lyrics').style.color = "#000";
-document.getElementById('author').style.color = "#b3b3b3"
 
 const setmode = (mode) => {
 	state.select = mode;
@@ -29,9 +29,9 @@ var player = new Vue({
 		player.url = `https://www.youtube.com/embed/${id}?start=${time}&autoplay=1`;
 	  }
 	}
-  });
+});
   
-  var song_list = new Vue({
+var song_list = new Vue({
 	el: '#song-list',
 	data: { songs: [] },
 	mounted: () => {
@@ -64,4 +64,4 @@ var player = new Vue({
 	  );
 	  xhr.send();
 	}
-  });
+});
