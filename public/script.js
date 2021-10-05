@@ -30,22 +30,24 @@ var player = new Vue({
 	  }
 	}
 });
-  
+
 var song_list = new Vue({
 	el: '#song-list',
 	data: { songs: [] },
 	mounted: () => {
 	  let lyrics;
-	  let pattern = /- (.*) \[(.*)\]\(https\:\/\/youtu\.be\/([a-zA-Z0-9_-]+)\?t=(\d+)\).*/;
+	  let pattern = /- (.*) \[(.*)\]\(http(?:s|.*)\:\/\/(?:www|m|.*)(?:\.|.*)(?:youtu\.be|youtube\.com)\/(?:watch\?v=|.*)([A-Za-z0-9_\-]{11})(?:\?|&)t=(\d+)(?:s|.*)\).*/;
 	  let xhr = new XMLHttpRequest();
 	  xhr.onreadystatechange = () => {
 		if (xhr.readyState === 4) {
 		  lyrics = xhr.responseText
 						 .split("\n")
-						 .filter((line) => /youtu\.be/.test(line))
+						 .filter((line) => /(youtu\.be|(?:www\.|.*)youtube.com)/.test(line))
+			console.log(lyrics)
 		  lyrics.forEach((line) => {
 			let match = line.match(pattern);
-			if (match === null || match.length !== 5) {
+			console.log(match)
+			if (!match) {
 			  console.log(`error: can not parse "${line}"`);
 			  return;
 			}
