@@ -104,35 +104,35 @@ html::-webkit-scrollbar {
   place-items: center;
 }
 
-#func-container { 
-	user-select: none;
-	border: 5px solid #ccc;
-	padding: 6px;
-	margin: 10px;
-	border-radius: 30px;
+#func-container {
+  user-select: none;
+  border: 5px solid #ccc;
+  padding: 6px;
+  margin: 10px;
+  border-radius: 30px;
 }
 
-#now-play { 
-	font-size: 2em;
-	cursor: pointer;
+#now-play {
+  font-size: 2em;
+  cursor: pointer;
 }
 
 #findsong {
-	max-width: 100px;
-	border-radius: 30px;
-	border: 2px solid #aaa;
-	padding: 10px;
+  max-width: 100px;
+  border-radius: 30px;
+  border: 2px solid #aaa;
+  padding: 10px;
 }
 
 #control-btn {
-	color: #b3b3b3;
-	font-size: 2.3em;
-	margin-left: 1em;
-	margin-right: 1em;  
+  color: #b3b3b3;
+  font-size: 2.3em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
-#control-btn:active { 
-	color: #000;
+#control-btn:active {
+  color: #000;
 }
 
 @media (max-width: 1124px) {
