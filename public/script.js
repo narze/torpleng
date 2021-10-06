@@ -30,7 +30,7 @@ var player = new Vue({
 	  }
 	}
 });
-  
+
 var song_list = new Vue({
 	el: '#song-list',
 	data: { songs: [] },
