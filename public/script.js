@@ -29,7 +29,7 @@ const song = (fwd) => {
       break;
     case "backward":
       var position = parseInt(window.location.hash.slice(1));
-      if (!position) {
+      if (!position || position === 1) {
         return;
       }
       window.location.href = "#" + (position - 1);
