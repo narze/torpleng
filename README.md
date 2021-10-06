@@ -26,10 +26,10 @@
 
 ตัวอย่าง : `ดีแล้ว ที่เธอกระทำอยู่ทุกวันนี้ [สหายแห่งสายลม - ดีแล้ว](https://youtu.be/52rn8wsfxSM?t=39)`
 
-## Features (TODO)
+## Features
 
 - [x] Render with HTML (Vue.js) - Done by @neizod :pray:
-- Validate with Github Actions
+- [ ] Validate format with Github Actions
 
 ## Entries
 
