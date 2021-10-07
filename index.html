@@ -1,52 +1,55 @@
+<head>
+  <title>ต่อเพลง</title>
+</head>
 <link rel="stylesheet" href="./public/style.css" />
 <link rel="shortcut icon" href="./public/favicon.svg" type="image/svg+xml" />
 <div class="container">
-	<div id="header">
-		<h1>🎤 ต่อเพลง 🎸</h1>
-	</div>
-	<div id="player">
-		<iframe
-			id="playframe"
-			v-bind:src="url"
-			width="560"
-			height="315"
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			allowfullscreen
-		>
-		</iframe>
-	</div>
-	<div id="song-list">
-		<ol>
-			<li
-				v-for="song in songs"
-				id="song-card"
-				v-on:click="window.location.href=`#${song.pos}`"
-			>
-				<a v-bind:id="song.pos">
-					{{ state.select === 'lyrics' ? song.excerpt : song.artist_song }}
-				</a>
-			</li>
-		</ol>
-	</div>
-	<div id="functions">
-		<div id="now-play">Title Song</div>
-		<div id="func-container">
-			<a id="control-btn" onclick="song('backward');">◀</a>
-			<a id="lyrics" onclick="setmode('lyrics');">เนื้อเพลง</a>
-			<input type="text" name="findsong" id="findsong" placeholder="No." />
-			<a id="author" onclick="setmode('author');">ผู้แต่ง</a>
-			<a id="control-btn" onclick="song('forward');">▶</a>
-		</div>
-	</div>
+  <div id="header">
+    <h1>🎤 ต่อเพลง 🎸</h1>
+  </div>
+  <div id="player">
+    <iframe
+      id="playframe"
+      v-bind:src="url"
+      width="560"
+      height="315"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
+  </div>
+  <div id="song-list">
+    <ol>
+      <li
+        v-for="song in songs"
+        id="song-card"
+        v-on:click="window.location.href=`#${song.pos}`"
+      >
+        <a v-bind:id="song.pos">
+          {{ state.select === 'lyrics' ? song.excerpt : song.artist_song }}
+        </a>
+      </li>
+    </ol>
+  </div>
+  <div id="functions">
+    <div id="now-play">Song Title</div>
+    <div id="func-container">
+      <a title="เพลงก่อนหน้า" id="control-btn" onclick="song('backward');">◀</a>
+      <a id="lyrics" onclick="setmode('lyrics');">เนื้อเพลง</a>
+      <input type="text" name="findsong" id="findsong" placeholder="No." />
+      <a id="author" onclick="setmode('author');">ผู้แต่ง</a>
+      <a title="เพลงต่อไป" id="control-btn" onclick="song('forward');">▶</a>
+    </div>
+  </div>
 </div>
 <div id="support">
-	<a href="https://github.com/narze/torpleng" target="_blank">
-		<img id="kofi" width="30" height="30" src="./public/github.png" />
-	</a>
-	<a href="https://ko-fi.com/narze" target="_blank">
-		<img id="kofi" width="140" height="30" src="./public/coffee.png" />
-	</a>
+  <a href="https://github.com/narze/torpleng" target="_blank">
+    <img id="kofi" width="30" height="30" src="./public/github.png" />
+  </a>
+  <a href="https://ko-fi.com/narze" target="_blank">
+    <img id="kofi" width="140" height="30" src="./public/coffee.png" />
+  </a>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
