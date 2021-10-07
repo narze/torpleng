@@ -14,8 +14,8 @@ html::-webkit-scrollbar {
 	height: 97.8vh;
 	align-items: stretch;
 	grid-template-columns: minmax(0, 1fr) 1fr;
-	min-height: 0; 
-	min-width: 0;   
+	min-height: 0;
+	min-width: 0;
 }
 
 #header {
@@ -30,6 +30,7 @@ html::-webkit-scrollbar {
 	max-height: 900px;
 	overflow: scroll;
 	grid-row: span 2 / span 2;
+	scroll-behavior: smooth;
 }
 
 #song-list ol {
@@ -65,12 +66,12 @@ html::-webkit-scrollbar {
 }
 
 #song-list::-webkit-scrollbar-thumb {
-	background: rgb(146, 146, 146); 
+	background: rgb(146, 146, 146);
 	border-radius: 10px;
 }
 
 #song-list::-webkit-scrollbar-thumb:hover {
-	background: #535353; 
+	background: #535353;
 }
 
 #playframe {
@@ -88,18 +89,56 @@ html::-webkit-scrollbar {
 	display: inline-block;
 }
 
-#lyrics, #author {
+#lyrics,
+#author {
 	color: #b3b3b3;
-	font-size: 2.3em;
-	margin-left: 55px;
+	font-size: 2em;
+	margin-left: 1em;
+	margin-right: 1em;
 	cursor: pointer;
 }
 
 #functions {
 	font-family: 'Sarabun', sans-serif;
+	display: grid;
+	place-items: center;
+}
+
+#func-container {
+	user-select: none;
+	border: 3px solid #ccc;
+	padding: 6px;
+	margin: 10px;
+	border-radius: 25px;
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+}
+
+#now-play {
+	text-align: center;
+	font-size: 1.8em;
+	cursor: pointer;
+}
+
+#findsong {
+	max-width: 100px;
+	border-radius: 30px;
+	border: 2px solid #aaa;
+	padding: 10px;
+}
+
+#control-btn {
+	cursor: pointer;
+	color: #b3b3b3;
+	font-size: 2.3em;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+#control-btn:active {
+	color: #000;
 }
 
 @media (max-width: 1124px) {
@@ -110,6 +149,5 @@ html::-webkit-scrollbar {
 	}
 	#song-list li {
 		padding: 25px;
-	}	
-	
+	}
 }
