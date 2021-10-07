@@ -59,6 +59,13 @@ window.onload = () => {
 	loadsong();
 };
 
+document.addEventListener('keyup', (e) => {
+	const backwardKeys = [37, 72]; // leftArrow, H
+	const forwardKeys = [39, 76]; // rightArrow, L
+	if (backwardKeys.include(e.keyCode)) song('backward');
+	if (forwardKeys.include(e.keyCode)) song('forward');
+});
+
 document.querySelector('#findsong').addEventListener('change', () => {
 	let value = parseInt(document.querySelector('#findsong').value);
 	if (value > song_list.songs.length || value <= 0 || isNaN(value)) return;
