@@ -119,4 +119,7 @@
 
 - (ไม่เอาอีกแล้วคน)ใจร้าย ที่ผ่านมาทุกที ต้องเจ็บปวดทุกที ทำไมชีวิตต้องเจอกับคนแบบนี้ [LIPTA Feat. Ink Waruntorn - เจอแต่คนใจร้าย](https://www.youtube.com/watch?v=DXPrQ4w-pSg&t=43s)
 
+- (ศักดิ์สิทธิ์เพียง) ไหนจงบันดาล สู่แดนดินแด่ตัวเธอผู้ช้ำตรมในดวงใจ ให้หายความจาบัลย์ [The Olarn Project - อย่าหยุดยั้ง](https://www.youtube.com/watch?v=r3HRX05TkrQ&t=435s)
+
+
 <!-- เพิ่มเพลงด้านบนบรรทัดนี้ format : เนื้อเพลง [ศิลปิน/วง - ชื่อเพลง](Youtube link with timestamp) -->
