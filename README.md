@@ -119,4 +119,6 @@
 
 - (ไม่เอาอีกแล้วคน)ใจร้าย ที่ผ่านมาทุกที ต้องเจ็บปวดทุกที ทำไมชีวิตต้องเจอกับคนแบบนี้ [LIPTA Feat. Ink Waruntorn - เจอแต่คนใจร้าย](https://www.youtube.com/watch?v=DXPrQ4w-pSg&t=43s)
 
+- นี่ฉันเอง คนนี้ นี่ฉันเองคนเดิมที่ยังรักเธอ นี่ฉันรอที่จะได้เจอ ยังรอที่จะพบเธอ ไม่ว่านานแค่ไหน [นี่ฉันเอง - Lipta Feat. Kob Flat Boy (Official MV)](https://www.youtube.com/watch?v=lFsXixn7PGY)
+
 <!-- เพิ่มเพลงด้านบนบรรทัดนี้ format : เนื้อเพลง [ศิลปิน/วง - ชื่อเพลง](Youtube link with timestamp) -->
