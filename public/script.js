@@ -62,8 +62,8 @@ window.onload = () => {
 document.addEventListener('keyup', (e) => {
 	const backwardKeys = [37, 72]; // leftArrow, H
 	const forwardKeys = [39, 76]; // rightArrow, L
-	if (backwardKeys.include(e.keyCode)) song('backward');
-	if (forwardKeys.include(e.keyCode)) song('forward');
+	if (backwardKeys.includes(e.keyCode)) song('backward');
+	if (forwardKeys.includes(e.keyCode)) song('forward');
 });
 
 document.querySelector('#findsong').addEventListener('change', () => {
