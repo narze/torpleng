@@ -92,7 +92,7 @@ html::-webkit-scrollbar {
 #lyrics,
 #author {
 	color: #b3b3b3;
-	font-size: 2.3em;
+	font-size: 2em;
 	margin-left: 1em;
 	margin-right: 1em;
 	cursor: pointer;
@@ -106,14 +106,19 @@ html::-webkit-scrollbar {
 
 #func-container {
 	user-select: none;
-	border: 5px solid #ccc;
+	border: 3px solid #ccc;
 	padding: 6px;
 	margin: 10px;
-	border-radius: 30px;
+	border-radius: 25px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 #now-play {
-	font-size: 2em;
+	text-align: center;
+	font-size: 1.8em;
 	cursor: pointer;
 }
 
@@ -125,6 +130,7 @@ html::-webkit-scrollbar {
 }
 
 #control-btn {
+	cursor: pointer;
 	color: #b3b3b3;
 	font-size: 2.3em;
 	margin-left: 1em;
