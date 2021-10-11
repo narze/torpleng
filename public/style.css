@@ -18,6 +18,10 @@ html::-webkit-scrollbar {
 	min-width: 0;
 }
 
+.underline{
+	text-decoration-line: underline;
+}
+
 #header {
 	font-family: 'Sarabun', sans-serif;
 	grid-column: 1 / -1;

@@ -34,6 +34,7 @@
   </div>
   <div id="functions">
     <div id="now-play">Song Title</div>
+    <div>เพิ่มเพลงได้ที่ <a href="https://github.com/narze/torpleng" target="_blank" class="underline">github</a></div>
     <div id="func-container">
       <a title="เพลงก่อนหน้า" id="control-btn" onclick="song('backward');">◀</a>
       <a id="lyrics" onclick="setmode('lyrics');">เนื้อเพลง</a>
@@ -44,13 +45,18 @@
   </div>
 </div>
 <div id="support">
-  <a href="https://github.com/narze/torpleng" target="_blank">
-    <img id="kofi" width="30" height="30" src="./public/github.png" />
-  </a>
-  <a href="https://ko-fi.com/narze" target="_blank">
-    <img id="kofi" width="140" height="30" src="./public/coffee.png" />
-  </a>
+  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+  <script>
+    kofiWidgetOverlay.draw('narze', {
+      'type': 'floating-chat',
+      'floating-chat.donateButton.text': 'Support me',
+      'floating-chat.donateButton.background-color': '#00b9fe',
+      'floating-chat.donateButton.text-color': '#fff'
+    });
+  </script>
+  
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <script src="./public/script.js"></script>
+
