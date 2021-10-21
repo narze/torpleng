@@ -98,7 +98,7 @@ var song_list = new Vue({
 	mounted: () => {
 		let lyrics;
 		let pattern =
-			/- (.*) \[(.*)\]\(http(?:s|.*)\:\/\/(?:www|m|.*)(?:\.|.*)(?:youtu\.be|youtube\.com)\/(?:watch\?v=|.*)([A-Za-z0-9_\-]{11})(?:\?|&)t=(\d+)(?:s|.*)\).*/;
+			/- (.*) \[(.*)\]\(http(?:s|.*)\:\/\/(?:www|m|.*)(?:\.|.*)(?:youtu\.be|youtube\.com)\/(?:watch\?v=|.*)([A-Za-z0-9_\-]{11})(?:\?|&|#)t=(\d+)(?:s|.*)\).*/;
 		let xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = () => {
 			if (xhr.readyState === 4) {
