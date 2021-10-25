@@ -1,0 +1,17 @@
+{
+    "name": "torpleng",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+      "build:ci": "tsc -p ./.ci/tsconfig.json",
+      "test:format": "node ./dist/checkFormat.js"
+    },
+    "dependencies": {
+      "@actions/core": "^1.6.0",
+      "fs": "^0.0.1-security"
+    },
+    "devDependencies": {
+        "typescript": "^4.3.2",
+        "@types/node": "^16.11.4"
+    }
+}
