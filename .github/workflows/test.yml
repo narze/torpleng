@@ -1,0 +1,24 @@
+name: Check Format
+on: push
+
+jobs:
+  formats:
+    name: Check Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node v16
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+        
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn run build:ci
+
+      - name: Run Check Format
+        run: yarn run test:format
