@@ -29,7 +29,7 @@
 ## Features
 
 - [x] Render with HTML (Vue.js) - Done by @neizod :pray:
-- [ ] Validate format with Github Actions
+- [x] Validate format with Github Actions
 
 ## Entries
 
