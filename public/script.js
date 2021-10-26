@@ -102,7 +102,7 @@ var player = new Vue({
 	el: '#player',
 	data: { url: 'https://www.youtube.com/embed/0qJRAmktUJw?autoplay=1&enablejsapi=1' },
 	methods: {
-		load_video: (id, start, end) => {
+		load_video: (id, start, end=parseInt(start)+10) => {
 			player.url = `https://www.youtube.com/embed/${id}?start=${start}&end=${end}&autoplay=1&enablejsapi=1`;
 		},
 	},
@@ -114,7 +114,7 @@ var song_list = new Vue({
 	mounted: () => {
 		let lyrics;
 		let pattern =
-			/- (.*) \[(.*)\]\(http(?:s|.*)\:\/\/(?:www|m|.*)(?:\.|.*)(?:youtu\.be|youtube\.com)\/(?:watch\?v=|.*)([A-Za-z0-9_\-]{11})(?:\?|&|#)t=(\d+)(?:s|.*)(?:\?|&)end=(\d+)(?:s|.*)\).*/;
+			/- (.*) \[(.*)\]\(http(?:s|.*)\:\/\/(?:www|m|.*)(?:\.|.*)(?:youtu\.be|youtube\.com)\/(?:watch\?v=|.*)([A-Za-z0-9_\-]{11})(?:\?|&|#)t=(\d+)(?:s)?(?:(?:\?|&)end=(\d+)(?:s|.*))?\).*/;
 		let xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = () => {
 			if (xhr.readyState === 4) {
