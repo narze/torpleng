@@ -6,7 +6,7 @@ let total = 0;
 
 for (const content of file.substring(file.indexOf("Entries")).match(/- .*/g)) {
   if (
-    !/- .* \[.*\]\(https:\/\/(www[.])?(youtu[.]?be)([.]com)?\/((watch\?v=)?[^&#]{5,})[&#?]t=[0-9]+s?\)/.test(content)
+    !/- .* \[.*\]\(https:\/\/(www[.])?(youtu[.]?be)([.]com)?\/((watch\?v=)?[^&#]{5,})[&#?]t=[0-9]+s?([&#?]end=[0-9]+s?)?\)/.test(content)
   ) {
     total += 1;
     console.log(`${content}; Line: ${getLine(content)}`);

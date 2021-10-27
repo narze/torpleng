@@ -46,7 +46,7 @@ const loadsong = () => {
 				.scrollIntoView(true);
 			document.getElementById('now-play').innerHTML =
 				x.pos + '. ' + x.artist_song;
-			player.load_video(x.id, x.time);
+			player.load_video(x.id, x.start, x.end);
 		}
 	}
 };
@@ -58,6 +58,22 @@ window.addEventListener('hashchange', function () {
 window.onload = () => {
 	loadsong();
 };
+
+window.onYouTubeIframeAPIReady = () => {
+	new YT.Player('playframe');
+}
+
+window.addEventListener('message', (e) => {
+	if (e.origin === 'https://www.youtube.com') {
+		playerData = JSON.parse(e.data)
+		if (
+			playerData.event === 'infoDelivery' &&
+			playerData.info.playerState === YT.PlayerState.ENDED
+		) {
+			song('forward');
+		}
+	}
+});
 
 document.addEventListener('keyup', (e) => {
 	const backwardKeys = [37, 72]; // leftArrow, H
@@ -84,10 +100,10 @@ var state = new Vue({
 
 var player = new Vue({
 	el: '#player',
-	data: { url: 'https://www.youtube.com/embed/0qJRAmktUJw?autoplay=1' },
+	data: { url: 'https://www.youtube.com/embed/0qJRAmktUJw?autoplay=1&enablejsapi=1' },
 	methods: {
-		load_video: (id, time) => {
-			player.url = `https://www.youtube.com/embed/${id}?start=${time}&autoplay=1`;
+		load_video: (id, start, end=parseInt(start)+10) => {
+			player.url = `https://www.youtube.com/embed/${id}?start=${start}&end=${end}&autoplay=1&enablejsapi=1`;
 		},
 	},
 });
@@ -98,7 +114,7 @@ var song_list = new Vue({
 	mounted: () => {
 		let lyrics;
 		let pattern =
-			/- (.*) \[(.*)\]\(http(?:s|.*)\:\/\/(?:www|m|.*)(?:\.|.*)(?:youtu\.be|youtube\.com)\/(?:watch\?v=|.*)([A-Za-z0-9_\-]{11})(?:\?|&|#)t=(\d+)(?:s|.*)\).*/;
+			/- (.*) \[(.*)\]\(http(?:s|.*)\:\/\/(?:www|m|.*)(?:\.|.*)(?:youtu\.be|youtube\.com)\/(?:watch\?v=|.*)([A-Za-z0-9_\-]{11})(?:\?|&|#)t=(\d+)(?:s)?(?:(?:\?|&)end=(\d+)(?:s|.*))?\).*/;
 		let xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = () => {
 			if (xhr.readyState === 4) {
@@ -108,7 +124,7 @@ var song_list = new Vue({
 				var i = 1;
 				lyrics.forEach((line) => {
 					let match = line.match(pattern);
-					if (match === null || match.length !== 5) {
+					if (match === null || match.length !== 6) {
 						console.log(`error: can not parse "${line}"`);
 						return;
 					}
@@ -116,7 +132,8 @@ var song_list = new Vue({
 						excerpt: match[1],
 						artist_song: match[2],
 						id: match[3],
-						time: match[4],
+						start: match[4],
+						end: match[5],
 						pos: i,
 					});
 					i++;
