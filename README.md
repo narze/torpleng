@@ -22,14 +22,14 @@
 - เนื้อเพลงที่นำมาต่อ
 - ชื่อเพลง
 - ชื่อศิลปิน หรือวง
-- ลิงก์ของคลิป Youtube พร้อมเวลาของท่อนเพลงที่นำมาต่อ และวินาทีที่ท่อนนั้นจบ โดยตัด Query String อื่นๆ ออก เช่น https://www.youtube.com/watch?v=T6F6hOKPCo4&t=71&end=82
+- ลิงก์ของคลิป Youtube พร้อมเวลาของท่อนเพลงที่นำมาต่อ และวินาทีที่ท่อนนั้นจบ โดยตัด Query String อื่นๆ ออก เช่น https://www.youtube.com/watch?v=T6F6hOKPCo4&t=71&end=82 (`t=วินาทีที่เริ่ม` จะได้จากการกดแชร์คลิปบนเว็บ Youtube ส่วน `end=วินาทีที่จบ` ต้องใส่เองโดยคั่นด้วยตัว `&`)
 
 ตัวอย่าง : `ดีแล้ว ที่เธอกระทำอยู่ทุกวันนี้ [สหายแห่งสายลม - ดีแล้ว](https://youtu.be/52rn8wsfxSM?t=52&end=59)`
 
 ## Features
 
-- [x] Render with HTML (Vue.js) - Done by @neizod :pray:
-- [x] Validate format with Github Actions
+- Render with HTML (Vue.js) - Done by @neizod :pray:
+- Validate format with Github Actions
 
 ## Entries
 
