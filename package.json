@@ -7,7 +7,7 @@
       "test:format": "node ./dist/checkFormat.js"
     },
     "dependencies": {
-      "@actions/core": "^1.6.0",
+      "@actions/core": "^1.9.1",
       "fs": "^0.0.1-security"
     },
     "devDependencies": {
