@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: 1arp/create-a-file-action@0.2
+        with:
+          path: '.github'
+          file: 'labels.yml'
+          content: |
+            - name: has conflicts
+              description: This pull request has merge conflicts
+              color: cfd3d7
+
+
+      - uses: micnncim/action-label-syncer@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          prune: false
+  
+  label-conflicts:
+    runs-on: ubuntu-latest
+    needs: create-labels
+    steps:
+      - uses: mschilde/auto-label-merge-conflicts@master
+        with:
+          CONFLICT_LABEL_NAME: "has conflicts"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_RETRIES: 5
+          WAIT_MS: 5000
