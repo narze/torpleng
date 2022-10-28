@@ -1,0 +1,36 @@
+name: Append on merge
+
+on:
+  # Don't use "pull_request" it won't have access to GITHUB_TOKEN on forks
+  pull_request_target:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # Need to specify ref for pull_request_target events
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - uses: narze/append_on_merge@main
+        if: ${{ github.event_name == 'pull_request_target' }}
+        with:
+          mode: "preview"
+          input_path: "input"
+          base: "README.md"
+          output: "README.md"
+          processed_path: "processed"
+          repo: ${{ github.event.pull_request.repository.name }}
+
+      - uses: narze/append_on_merge@main
+        if: ${{ github.event_name == 'push' }}
+        with:
+          mode: "commit"
+          input_path: "input"
+          base: "README.md"
+          output: "README.md"
+          processed_path: "processed"
