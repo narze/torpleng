@@ -147,3 +147,41 @@ var song_list = new Vue({
 		xhr.send();
 	},
 });
+
+let ctrlStateLeft = false;
+let ctrlStateRight = false;
+
+function handleController() {
+	const controller = window.navigator.getGamepads()[0];
+
+	if (!controller) return;
+
+	if (controller.buttons[6].pressed) {
+		if (!ctrlStateLeft) {
+			song('backward');
+			ctrlStateLeft = true;
+		}
+	}
+	else {
+		ctrlStateLeft = false;
+	}
+
+	if (controller.buttons[7].pressed) {
+		if (!ctrlStateRight) {
+			song('forward')
+			ctrlStateRight = true;
+		}
+	}
+	else {
+		ctrlStateRight = false;
+	}
+}
+
+let gamepadHandlerSet = false;
+
+window.addEventListener("gamepadconnected", (e) => {
+	if (!gamepadHandlerSet) {
+		setInterval(handleController, 100);
+		gamepadHandlerSet = true;
+	}
+});
